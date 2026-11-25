@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Angka Kelas 5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="transition-curtain" id="curtain"></div>
+
+    <div class="topbar">
+        <div class="brand">MATEMATIKA SD • KELAS 5</div>
+        <div class="controls">
+            <button type="button" class="top-btn" id="bgm-btn">♪ Musik: OFF</button>
+            <button type="button" class="top-btn" id="sfx-btn">✦ Suara: ON</button>
+        </div>
+    </div>
+
+    <main class="shell">
+        <section id="screen-home" class="card view-enter">
+            <div class="hero-stage">
+                <canvas id="home-canvas" width="760" height="230"></canvas>
+                <div class="hero-caption">
+                    <span class="pill-title">KUIS INTERAKTIF</span>
+                    <h1>Petualangan Hitung Kelas 5</h1>
+                    <p>10 soal pilihan ganda • Tanpa waktu • Langsung kelihatan jawabannya</p>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <input type="text" id="student-name" placeholder="Tulis namamu dulu..." maxlength="18" autocomplete="off">
+                <button type="button" class="btn-start" id="start-btn">MULAI MAIN ▶</button>
+            </div>
+        </section>
+
+        <section id="screen-quiz" class="card hidden">
+            <div class="quiz-top">
+                <div class="quiz-left">
+                    <span class="tag-name" id="show-name">Siswa</span>
+                    <span class="tag-count" id="show-count">1 / 10</span>
+                </div>
+                <div class="quiz-right">
+                    <span class="tag-score" id="show-score">0 pt</span>
+                </div>
+            </div>
+
+            <div class="progress-line">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <div class="static-pic" id="static-pic"></div>
+
+            <h2 class="q-text" id="q-text"></h2>
+
+            <div class="grid-opts" id="grid-opts"></div>
+
+            <div class="result-strip hidden" id="result-strip"></div>
+
+            <div class="footer-action">
+                <button type="button" class="btn-next hidden" id="next-btn">SOAL BERIKUTNYA ▶</button>
+            </div>
+        </section>
+
+        <section id="screen-done" class="card hidden">
+            <div class="done-badge">SELESAI</div>
+            <h2 class="done-title" id="done-title">Hebat!</h2>
+            <div class="done-score" id="done-score">0</div>
+            <p class="done-msg" id="done-msg"></p>
+            <button type="button" class="btn-start" id="retry-btn">MAIN LAGI ↻</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    </body>
+</html>
